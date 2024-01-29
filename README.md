@@ -2,6 +2,11 @@
 
 By: Enick Jhony
 
+Premissas:
+
+- O front vai iniciar na rota "/" que vai me trazer um `GetAll` de todos registros criados
+- ainda na rota "/" vai ter um botão para direcionar para a criação do registro
+
 Steps:
 
 - [x] Definição do Back-End
