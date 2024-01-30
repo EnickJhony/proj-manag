@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  database:
+    image: 'postgres:16.0-alpine3.18'
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=proj_manag
