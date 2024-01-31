@@ -16,5 +16,12 @@ model Project {
   description String
   startDate   DateTime
   endDate     DateTime?
-  members     String[]
+  members     Member? @relation("ProjectMembers", fields: [memberId], references: [id])
+  memberId    Int?
+}
+
+model Member {
+  id        Int       @id @unique @default(autoincrement())
+  name      String
+  projects  Project[] @relation("ProjectMembers")
 }
