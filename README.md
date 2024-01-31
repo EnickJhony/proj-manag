@@ -26,3 +26,7 @@ Backend
 
 Frontend
 - [ ] Definição do Front-End
+
+### Diagrama de Classe
+
+![Diagrama de classe](./.github/ClassDiagram.png)
