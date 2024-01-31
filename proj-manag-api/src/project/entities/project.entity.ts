@@ -2,7 +2,7 @@ export class Project {
   id: number;
   name: string;
   description: string;
-  startDate: Date;
-  endDate?: Date;
+  startDate: string;
+  endDate?: string;
   members?: string[];
 }
