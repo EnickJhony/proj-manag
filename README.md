@@ -8,7 +8,7 @@ By: Enick Jhony
 - ainda na rota "/" vai ter um botão para direcionar para a criação do registro
 
 ### Steps:
-Backend
+Back end
 - [x] Definição do Back-End
 - [x] Implantação do Model da aplicação
 - [x] Implantação do Docker juntamente com imagem do PostgreSQL
@@ -24,8 +24,13 @@ Backend
 - [ ] Criar Validação dos campos junto ao banco e backend
 - [ ] Criar testes unitários
 
-Frontend
-- [ ] Definição do Front-End
+Front end
+- [x] Definição do Front-End com a limpeza inicial
+- [ ] Criar componente / serviço para listagem dos projetos
+- [ ] Criar componente / serviço para a criação do projetos
+- [ ] Criar botão para a deleção dos projetos pelo ID
+- [ ] Criar componente / serviço para mostrar os detalhes do projetos
+- [ ] 
 
 ### Diagrama de Classe
 
