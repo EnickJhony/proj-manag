@@ -1,0 +1,13 @@
+<tbody>
+  @for(project of project; track project.id){
+  <tr>
+    <td>{{ project.id }}</td>
+    <td>{{ project.name }}</td>
+    <td>{{ project.description }}</td>
+    <td>{{ project.startDate }}</td>
+    <td>{{ project.endDate }}</td>
+    <td>{{ project.members.name }}</td>
+    <td><a href="#">remover</a></td>
+  </tr>
+  }
+</tbody>
