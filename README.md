@@ -26,11 +26,10 @@ Back end
 
 Front end
 - [x] Definição do Front-End com a limpeza inicial
-- [ ] Criar componente / serviço para listagem dos projetos
+- [x] Criar componente / serviço para listagem dos projetos
 - [ ] Criar componente / serviço para a criação do projetos
 - [ ] Criar botão para a deleção dos projetos pelo ID
 - [ ] Criar componente / serviço para mostrar os detalhes do projetos
-- [ ] 
 
 ### Diagrama de Classe
 
