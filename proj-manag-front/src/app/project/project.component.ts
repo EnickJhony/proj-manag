@@ -32,8 +32,6 @@ export class ProjectComponent {
 
     const memberId = this.project.memberId;
     const memberIdFormatted = parseInt(memberId);
-    console.log(typeof memberIdFormatted);
-    console.log(memberIdFormatted);
 
     const dataFormatted = {
       ...this.project,
@@ -42,9 +40,7 @@ export class ProjectComponent {
       memberId: memberIdFormatted,
     }
 
-    console.log(dataFormatted);
     this.http.post('http://localhost:3000/project', dataFormatted).subscribe(() => {
-      console.log('project created successfully');
       this.project = {
         name: '',
         description: '',

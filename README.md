@@ -33,6 +33,7 @@ Front end
 - [x] Criar rotar `/` e `/project` sendo o `getAll` e a página de cadastro `POST`
 - [ ] Criar validação dos campos pelo form.
 - [ ] Criar componente / serviço para mostrar os detalhes do projetos individualmente
+- [ ] Estilizar as páginas
 
 ### Diagrama de Classe
 
