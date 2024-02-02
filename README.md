@@ -28,9 +28,11 @@ Back end
 Front end
 - [x] Definição do Front-End com a limpeza inicial
 - [x] Criar componente / serviço para listagem dos projetos
-- [ ] Criar componente / serviço para a criação do projetos
+- [x] Criar componente / serviço para a criação do projetos
 - [x] Criar botão para a deleção dos projetos pelo ID
-- [ ] Criar componente / serviço para mostrar os detalhes do projetos
+- [x] Criar rotar `/` e `/project` sendo o `getAll` e a página de cadastro `POST`
+- [ ] Criar validação dos campos pelo form.
+- [ ] Criar componente / serviço para mostrar os detalhes do projetos individualmente
 
 ### Diagrama de Classe
 
