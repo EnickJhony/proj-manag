@@ -1,24 +1,11 @@
-<main class="main">
+<main>
   <div class="content">
-    <h1 class="title">ProjManagFront</h1>
-    <div class="newProject">
-      <button>Novo Projeto</button>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Start Date</th>
-          <th>End Date</th>
-          <th>Members</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <app-project-list />
-    </table>
+  <h1 class="title">ProjManagFront</h1>
+  <div class="newProject">
+    <button (click)="onClick()">Novo Projeto</button>
   </div>
+  <app-project-list />
+</div>
 </main>
 
 <router-outlet />
