@@ -19,7 +19,7 @@
       <td>{{ project.startDate }}</td>
       <td>{{ project.endDate }}</td>
       <td>{{ project.members.name }}</td>
-      <td><button (click)="onClick(project.id)" >remover</button></td>
+      <td><button (click)="deleteProject(project.id)" >remover</button></td>
     </tr>
     }
   </tbody>
