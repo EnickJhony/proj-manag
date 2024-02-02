@@ -5,7 +5,7 @@
   <a href="/">Voltar para a Home</a>
   <form (submit)="createProject()" method="post">
     <div>
-      <label for="project"> Nome do Projeto </label>
+      <label for="project"> Nome do Projeto *</label>
       <input
         type="text"
         [(ngModel)]="project.name"
@@ -13,7 +13,7 @@
       />
     </div>
     <div>
-      <label for="project"> Descrição do Projeto </label>
+      <label for="project"> Descrição do Projeto *</label>
       <textarea
         rows="4"
         [(ngModel)]="project.description"
@@ -21,7 +21,7 @@
       ></textarea>
     </div>
     <div>
-      <label for="project"> Data de Início </label>
+      <label for="project"> Data de Início *</label>
       <input
         type="date"
         [(ngModel)]="project.startDate"
@@ -37,7 +37,7 @@
       />
     </div>
     <div>
-      <label for="project"> Membros </label>
+      <label for="project"> Membros *</label>
       <select
         [(ngModel)]="project.memberId"
         [ngModelOptions]="{ standalone: true }"
