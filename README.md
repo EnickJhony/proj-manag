@@ -19,6 +19,7 @@ Back end
 - [x] Criar Metodo `GET BY ID`
 - [x] Criar Metodo `DELETE`
 - [x] Criar Seed dos membros iniciais
+- [x] Liberar CORS para receber solicitações do Frontend
 - [ ] Criar scripts para iniciar o projeto
 - [ ] Criar unico scripts para iniciar todo o projeto
 - [ ] Criar Validação dos campos junto ao banco e backend
@@ -28,7 +29,7 @@ Front end
 - [x] Definição do Front-End com a limpeza inicial
 - [x] Criar componente / serviço para listagem dos projetos
 - [ ] Criar componente / serviço para a criação do projetos
-- [ ] Criar botão para a deleção dos projetos pelo ID
+- [x] Criar botão para a deleção dos projetos pelo ID
 - [ ] Criar componente / serviço para mostrar os detalhes do projetos
 
 ### Diagrama de Classe
