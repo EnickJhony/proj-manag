@@ -1,0 +1,31 @@
+<main>
+  <div class="content">
+    <h1 class="title">ProjManagFront</h1>
+  </div>
+  <form (submit)="createProject()" method="post">
+    <div>
+      <label for="project"> Nome do Projeto </label>
+      <input type="text" [(ngModel)]="project.name" [ngModelOptions]="{standalone: true}" />
+    </div>
+    <div>
+      <label for="project"> Descrição do Projeto </label>
+      <textarea rows="4" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"  ></textarea>
+    </div>
+    <div>
+      <label for="project"> Data de Início </label>
+      <input type="date" [(ngModel)]="project.startDate" [ngModelOptions]="{standalone: true}"  />
+    </div>
+    <div>
+      <label for="project">Data de Término </label>
+      <input type="date" [(ngModel)]="project.endDate"  [ngModelOptions]="{standalone: true}"  />
+    </div>
+    <div>
+      <label for="project"> Membros </label>
+      <select  [(ngModel)]="project.memberId"  [ngModelOptions]="{standalone: true}" >
+        <option value="1">Admin 1</option>
+        <option value="2">Admin 2</option>
+      </select>
+    </div>
+    <button type="submit">Cadastrar</button>
+  </form>
+</main>

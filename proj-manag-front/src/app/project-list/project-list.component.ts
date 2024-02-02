@@ -26,9 +26,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   deleteProject(id: number) {
-    console.log('clicou no id ', id);
     this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
-      console.log('deletado');
       this.getProjects();
     })
   }
