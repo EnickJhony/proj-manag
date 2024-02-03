@@ -1,6 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 
+interface Member {
+  id: number;
+  name: string;
+}
+
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  members: Member;
+}
+
 @Component({
   selector: 'app-project-list',
   standalone: true,
@@ -11,7 +25,7 @@ import { Component, OnInit, inject } from '@angular/core';
 export class ProjectListComponent implements OnInit {
   http = inject(HttpClient);
 
-  project: any[] = [];
+  project: Project[] = [];
 
   apiUrl = 'http://localhost:3000/project';
 
@@ -21,13 +35,27 @@ export class ProjectListComponent implements OnInit {
 
   getProjects() {
     this.http.get(this.apiUrl).subscribe((project: any) => {
-      this.project = project;
+      const resul = project;
+
+      // resul.map((projectData: any) => {
+      //   const startDateFormatted = Intl.DateTimeFormat('pt-BR').format(
+      //     new Date(projectData.startDate)
+      //   );
+      //   projectData.startDate = startDateFormatted;
+
+      //   const endDateFormatted = Intl.DateTimeFormat('pt-BR').format(
+      //     new Date(projectData.endDate)
+      //   );
+      //   projectData.endDate = endDateFormatted;
+      // });
+
+      this.project = resul;
     });
   }
 
   deleteProject(id: number) {
     this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
       this.getProjects();
-    })
+    });
   }
 }
