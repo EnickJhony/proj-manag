@@ -4,8 +4,12 @@ By: Enick Jhony
 
 ### Premissas:
 
-- O front vai iniciar na rota "/" que vai me trazer um `GetAll` de todos registros criados
-- ainda na rota "/" vai ter um botão para direcionar para a criação do registro
+- O front vai iniciar na rota `/` que vai me trazer um `GetAll` de todos registros criados
+- ainda na rota `/` vai ter um link para direcionar para a criação do projeto
+- nesse link vai direcionar para a rota `/project` que vai ter um form para cadastrar novos projetos
+- voltando para a `home` terá uma lista com os projetos que foram posteriormente cadastrados
+- e ao lado de cada um dos projetos terá um botão para deletar o projeto
+- esse botão vai chamar o backend mandando o metodo `DELETE` junto com o ID do projeto
 
 ### Steps:
 Back end
@@ -31,9 +35,10 @@ Front end
 - [x] Criar componente / serviço para a criação do projetos
 - [x] Criar botão para a deleção dos projetos pelo ID
 - [x] Criar rotar `/` e `/project` sendo o `getAll` e a página de cadastro `POST`
-- [ ] Criar validação dos campos pelo form.
+- [x] Criar validação dos campos pelo form.
 - [ ] Criar componente / serviço para mostrar os detalhes do projetos individualmente
 - [ ] Estilizar as páginas
+- [ ] Resolver problema de renderização da Data na página home (possivelmente problema de timezone)
 
 ### Diagrama de Classe
 
