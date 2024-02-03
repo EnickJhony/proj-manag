@@ -1,9 +1,26 @@
-<main>
-  <div class="content">
-    <h1 class="title">ProjManagFront</h1>
-    <div class="newProject">
-      <a href="/project">Novo Projeto</a>
-    </div>
+<main class="bg-slate-100 h-screen">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <header class="flex items-center py-2 justify-between border-b">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
+        aria-label="logo"
+      >
+        <img src="../../assets/logo.png" alt="Logo Digiboard" />
+      </a>
+      <nav class="hidden gap-12 lg:flex">
+        <a href="/" class="text-lg font-semibold text-blue-700"> Home </a>
+        <a
+          href="/project"
+          class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-blue-700 active:text-blue-900"
+        >
+          Cadastrar
+        </a>
+      </nav>
+    </header>
+    <h1 class="text-5xl text-center text-blue-900 text-bold my-16">
+      Listagem de projetos
+    </h1>
     <app-project-list />
   </div>
 </main>

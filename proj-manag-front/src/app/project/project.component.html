@@ -1,51 +1,111 @@
-<main>
-  <div class="content">
-    <h1 class="title">ProjManagFront</h1>
-  </div>
-  <a href="/">Voltar para a Home</a>
-  <form (submit)="createProject()" method="post">
-    <div>
-      <label for="project"> Nome do Projeto *</label>
-      <input
-        type="text"
-        [(ngModel)]="project.name"
-        [ngModelOptions]="{ standalone: true }"
-      />
-    </div>
-    <div>
-      <label for="project"> Descrição do Projeto *</label>
-      <textarea
-        rows="4"
-        [(ngModel)]="project.description"
-        [ngModelOptions]="{ standalone: true }"
-      ></textarea>
-    </div>
-    <div>
-      <label for="project"> Data de Início *</label>
-      <input
-        type="date"
-        [(ngModel)]="project.startDate"
-        [ngModelOptions]="{ standalone: true }"
-      />
-    </div>
-    <div>
-      <label for="project">Data de Término </label>
-      <input
-        type="date"
-        [(ngModel)]="project.endDate"
-        [ngModelOptions]="{ standalone: true }"
-      />
-    </div>
-    <div>
-      <label for="project"> Membros *</label>
-      <select
-        [(ngModel)]="project.memberId"
-        [ngModelOptions]="{ standalone: true }"
+<main class="bg-slate-100 h-screen">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <header
+      class="mb-8 flex items-center py-2 justify-between border-b md:mb-12 xl:mb-16"
+    >
+      <a
+        href="/"
+        class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
+        aria-label="logo"
       >
-        <option value="1">Enick</option>
-        <option value="2">Admin</option>
-      </select>
-    </div>
-    <button type="submit">Cadastrar</button>
-  </form>
+        <img src="../../assets/logo.png" alt="Logo Digiboard" />
+      </a>
+      <nav class="hidden gap-12 lg:flex">
+        <a
+          href="/"
+          class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-blue-700 active:text-blue-900"
+        >
+          Home
+        </a>
+        <a href="/project" class="text-lg font-semibold text-blue-700">
+          Cadastrar
+        </a>
+      </nav>
+    </header>
+    <h1 class="text-5xl text-center text-blue-900 text-bold my-16">
+      Cadastrar Projetos
+    </h1>
+    <form (submit)="createProject()" method="post" class="max-w-lg mx-auto">
+      <div class="relative z-0 w-full mb-5 group">
+        <input
+          type="text"
+          [(ngModel)]="project.name"
+          [ngModelOptions]="{ standalone: true }"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="project"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Nome do projeto</label
+        >
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+        <textarea
+          [(ngModel)]="project.description"
+          [ngModelOptions]="{ standalone: true }"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        ></textarea>
+        <label
+          for="project"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Descrição do projeto</label
+        >
+      </div>
+      <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="date"
+            [(ngModel)]="project.startDate"
+            [ngModelOptions]="{ standalone: true }"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="project"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Data de Início</label
+          >
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="date"
+            [(ngModel)]="project.endDate"
+            [ngModelOptions]="{ standalone: true }"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="project"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Data de Término</label
+          >
+        </div>
+      </div>
+      <div>
+        <label
+          for="project"
+          class="block mb-5 text-sm peer-focus:font-medium text-gray-500 peer-focus:text-blue-600"
+          >Membros</label
+        >
+        <select
+          [(ngModel)]="project.memberId"
+          [ngModelOptions]="{ standalone: true }"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+          >
+          <option value="1" class="text-gray-900 text-lg">Enick</option>
+          <option value="2" class="text-gray-900 text-lg">Admin</option>
+        </select>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-8"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </div>
 </main>

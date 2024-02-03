@@ -1,25 +1,38 @@
-<table>
-  <thead>
+<table
+  class="w-full border my-4 text-sm text-left rtl:text-right text-gray-400"
+>
+  <thead class="text-xs text-gray-700 uppercase bg-gray-100">
     <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Members</th>
-      <th>Actions</th>
+      <th class="px-6 py-3">Cod</th>
+      <th class="px-6 py-3">Nome</th>
+      <th class="px-6 py-3">Descrição</th>
+      <th class="px-6 py-3">Data Início</th>
+      <th class="px-6 py-3">Data Término</th>
+      <th class="px-6 py-3">Membro</th>
+      <th class="px-6 py-3">Ação</th>
     </tr>
   </thead>
   <tbody>
     @for(project of project; track project.id){
-    <tr>
-      <td>{{ project.id }}</td>
-      <td>{{ project.name }}</td>
-      <td>{{ project.description }}</td>
-      <td>{{ project.startDate }}</td>
-      <td>{{ project.endDate }}</td>
-      <td>{{ project.members.name }}</td>
-      <td><button (click)="deleteProject(project.id)" >remover</button></td>
+    <tr class="bg-white border-b">
+      <th class="px-6 py-4">{{ project.id }}</th>
+      <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+        {{ project.name }}
+      </td>
+      <td class="px-6 py-4 font-medium text-gray-900 max-w-lg">
+        {{ project.description }}
+      </td>
+      <td class="px-6 py-4">{{ project.startDate }}</td>
+      <td class="px-6 py-4">{{ project.endDate }}</td>
+      <td class="px-6 py-4">{{ project.members.name }}</td>
+      <td class="px-6 py-4">
+        <button
+          (click)="deleteProject(project.id)"
+          class="text-red-500 hover:text-white border border-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-900 font-medium rounded-lg text-sm px-4 py-2 text-center"
+        >
+          remover
+        </button>
+      </td>
     </tr>
     }
   </tbody>
